@@ -27,5 +27,6 @@ jobs:
       - run: |
           echo "Requesting OTP from Optic..."
           otp=$(curl -s https://optic-zf3votdk5a-ew.a.run.app/api/generate/dkv0r0auw)
-          npm publish --otp otp
+          npm publish --otp $otp
+          otp=remove
       - run: git push origin
