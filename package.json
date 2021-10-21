@@ -1,5 +1,5 @@
 {
-  "name": "auto-release-example",
+  "name": "smn-auto-release",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/salmanm/auto-release-example.git"
+    "url": "git+https://github.com/salmanm/smn-auto-release.git"
   },
   "author": "Salman Mitha <salmanmitha@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/salmanm/auto-release-example/issues"
+    "url": "https://github.com/salmanm/smn-auto-release/issues"
   },
-  "homepage": "https://github.com/salmanm/auto-release-example#readme"
+  "homepage": "https://github.com/salmanm/smn-auto-release#readme"
 }

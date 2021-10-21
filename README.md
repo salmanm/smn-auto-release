@@ -1,1 +1,1 @@
-# auto-release-example
+# smn-auto-release
