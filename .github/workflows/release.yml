@@ -24,4 +24,7 @@ jobs:
       - run: npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
       - run: npm install
       - run: npm version ${{ github.event.inputs.semver }}
-      - run: npm publish
+      - run: |
+          echo "Requesting OTP from Optic..."
+          otp=$(curl -s https://optic-zf3votdk5a-ew.a.run.app/api/generate/dkv0r0auw)
+          npm publish --otp
