@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
+      - run: git config --global user.email "actions@users.noreply.github.com"
+      - run: git config --global user.name "${{ github.actor }}"
       - run: npm install
-      - run: npm version ${{github.event.inputs.semver}}
+      - run: npm version ${{ github.event.inputs.semver }}
       - run: npm publish
