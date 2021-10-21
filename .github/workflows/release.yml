@@ -21,6 +21,7 @@ jobs:
           node-version: 14
       - run: git config --global user.email "actions@users.noreply.github.com"
       - run: git config --global user.name "${{ github.actor }}"
+      - run: npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
       - run: npm install
       - run: npm version ${{ github.event.inputs.semver }}
       - run: npm publish
