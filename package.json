@@ -1,0 +1,19 @@
+{
+  "name": "auto-release-example",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salmanm/auto-release-example.git"
+  },
+  "author": "Salman Mitha <salmanmitha@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salmanm/auto-release-example/issues"
+  },
+  "homepage": "https://github.com/salmanm/auto-release-example#readme"
+}
