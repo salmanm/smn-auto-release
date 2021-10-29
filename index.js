@@ -4,4 +4,5 @@ module.exports = () => {
   console.log('another new feature')
   console.log('a bug fixed')
   console.log('added feature A')
+  console.log('added feature B')
 }
