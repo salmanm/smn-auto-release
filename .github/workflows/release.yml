@@ -26,7 +26,7 @@ jobs:
       - run: npm version ${{ github.event.inputs.semver }}
       - run: |
           echo "Requesting OTP from Optic..."
-          otp=$(curl -s https://optic-zf3votdk5a-ew.a.run.app/api/generate/dkv0r0auw)
+          otp=$(curl -s https://optic-zf3votdk5a-ew.a.run.app/api/generate/sktwi23lbkvcberja)
           npm publish --otp $otp
           otp=remove
       - run: git push origin
