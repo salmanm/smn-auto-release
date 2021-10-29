@@ -11,22 +11,12 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    env:
-      NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-      NPM_TOKEN: ${{secrets.NPM_TOKEN}}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: salmanm/auto-publish@main
         with:
-          node-version: 14
-      - run: git config --global user.email "actions@users.noreply.github.com"
-      - run: git config --global user.name "${{ github.actor }}"
-      - run: npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
-      - run: npm install
-      - run: npm version ${{ github.event.inputs.semver }}
-      - run: |
-          echo "Requesting OTP from Optic..."
-          otp=$(curl -s https://optic-zf3votdk5a-ew.a.run.app/api/generate/sktwi23lbkvcberja)
-          npm publish --otp $otp
-          otp=remove
-      - run: git push origin
+          github-token: ${{secrets.github_token}}
+          npm-token: ${{secrets.NPM_TOKEN}}
+          optic-token: ${{secrets.OPTIC_TOKEN}}
+          actor-name: ${{ github.actor }}
+          actor-email: "actions@users.noreply.github.com"
+          semver: ${{ github.event.inputs.semver }}
