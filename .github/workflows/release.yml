@@ -6,7 +6,11 @@ on:
       semver:
         description: "The semver to use"
         required: true
-        default: "patch"
+        default: "patch" # TODO: validate input when GH actions support
+      tag:
+        description: "The npm tag"
+        required: false
+        default: "latest"
 
 jobs:
   release:
@@ -20,3 +24,4 @@ jobs:
           actor-name: ${{ github.actor }}
           actor-email: "actions@users.noreply.github.com"
           semver: ${{ github.event.inputs.semver }}
+          npm-tag: ${{ github.event.inputs.tag }}
