@@ -16,7 +16,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: salmanm/auto-publish@main
+      - uses: nearform/optic-release-automation@main
         with:
           github-token: ${{secrets.github_token}}
           npm-token: ${{secrets.NPM_TOKEN}}
