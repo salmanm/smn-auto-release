@@ -11,6 +11,9 @@ on:
         description: "The npm tag"
         required: false
         default: "latest"
+  push:
+    branches:
+      - master
 
 jobs:
   release:
