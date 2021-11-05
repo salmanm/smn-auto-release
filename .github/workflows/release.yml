@@ -13,15 +13,12 @@ on:
         default: "latest"
   pull_request:
     types: [closed]
-  # push:
-  #   branches:
-  #     - main
 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: nearform/optic-release-automation@main
+      - uses: nearform/optic-release-automation@v2
         with:
           github-token: ${{secrets.github_token}}
           npm-token: ${{secrets.NPM_TOKEN}}
