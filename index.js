@@ -7,4 +7,5 @@ module.exports = () => {
   console.log('added feature B')
   console.log('added feature C')
   console.log('added feature D')
+  console.log('added feature E')
 }
