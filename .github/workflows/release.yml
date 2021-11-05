@@ -11,9 +11,11 @@ on:
         description: "The npm tag"
         required: false
         default: "latest"
-  push:
-    branches:
-      - main
+  pull_request:
+    types: [closed]
+  # push:
+  #   branches:
+  #     - main
 
 jobs:
   release:
