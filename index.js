@@ -11,4 +11,5 @@ module.exports = () => {
   console.log('added feature F')
   console.log('added feature G')
   console.log('added feature H')
+  console.log('added feature I')
 }
