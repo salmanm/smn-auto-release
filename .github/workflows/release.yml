@@ -14,23 +14,11 @@ on:
   pull_request:
     types: [closed]
 
-permissions:
-  actions: write
-  checks: write
-  contents: write
-  deployments: write
-  issues: write
-  packages: write
-  pull-requests: write
-  repository-projects: write
-  security-events: write
-  statuses: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: nearform/optic-release-automation@pr-action
+      - uses: nearform/optic-release-automation@main
         with:
           github-token: ${{secrets.github_token}}
           npm-token: ${{secrets.NPM_TOKEN}}
