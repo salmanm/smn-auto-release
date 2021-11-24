@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/salmanm/smn-auto-release#readme",
   "devDependencies": {
-    "tap": "^15.1.2"
+    "tap": "^14"
   }
 }
