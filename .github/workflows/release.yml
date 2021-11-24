@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: nearform/optic-release-automation@pr-action
         with:
-          github-token: ${{secrets.github_token}}
+          github-token: ${{secrets.SMN_PAT}}
           npm-token: ${{secrets.NPM_TOKEN}}
           optic-token: ${{secrets.OPTIC_TOKEN}}
           semver: ${{ github.event.inputs.semver }}
