@@ -1,3 +1,5 @@
+name: Check Linked Issues
+
 on:
   pull_request:
     types: [opened, edited, reopened, synchronize]
