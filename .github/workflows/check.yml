@@ -3,9 +3,6 @@ name: Check Linked Issues
 on:
   pull_request:
     types: [opened, edited, reopened, synchronize]
-    branches-ignore:
-      - "dependabot"
-      - "releases"
 
 jobs:
   check_pull_requests:
@@ -15,9 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Use the action
-        uses: nearform/github-action-check-linked-issues@initial-implementation
+        uses: nearform/github-action-check-linked-issues@main
         id: check-linked-issues
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          exclude-branches: "pr-1"
       - name: Get the output
         run: echo "Has linked issues? ${{ steps.check-linked-issues.outputs.linked_issues_count }}"
