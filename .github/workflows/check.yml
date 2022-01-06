@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Use the action
-        uses: nearform/github-action-check-linked-issues@main
+        uses: nearform/github-action-check-linked-issues@fix-1
         id: check-linked-issues
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
